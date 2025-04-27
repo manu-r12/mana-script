@@ -66,3 +66,4 @@ public:
 } // namespace mana
 
 #endif // MANASCRIPT_LEXER_HPP// Adding lexer.hpp from manu-r12
+// Adding lexer.hpp from manu-r12
