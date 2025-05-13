@@ -1,34 +1,71 @@
-# Mana-script
-mana-script is a simple programming language built using the LLVM framework. Inspired by the Kaleidoscope tutorial, this project demonstrates the process of building a basic language, from lexical analysis to code generation.
+# 🔤 Mana Script
 
-## Chapters Implemented:
-Chapter 1: Lexer & Basic Parsing
-We implement a simple lexer and parser to process the basic structure of the language.
+**Mana Script** is a lightweight, LLVM-based programming language designed for simplicity and performance. Inspired by the [LLVM Kaleidoscope tutorial](https://llvm.org/docs/tutorial/), it demonstrates how to build a custom language from scratch—starting with a lexer and parser, progressing to LLVM IR code generation, and incorporating JIT compilation.
 
-Chapter 2: Code Generation to LLVM IR
-With the lexer and parser in place, we generate LLVM Intermediate Representation (IR) code that can be compiled and executed.
+---
 
-👥 Team Members
-Manu
+## 📚 Chapters Implemented
 
-Ayush
+### ✅ Chapter 1: Lexer & Basic Parsing
 
-Adnan
+* Implements a tokenizer using Finite State Automata (FSA)
+* Parses basic identifiers, numbers, and operators
+* Builds a simple Abstract Syntax Tree (AST)
 
-Manish
+### ✅ Chapter 2: Code Generation to LLVM IR
 
-🛠️ Getting Started
-Prerequisites
-C++ compiler (C++17 or later)
+* Converts AST into LLVM Intermediate Representation
+* Generates and prints IR using LLVM C++ API
 
-LLVM (version 14.0+ recommended)
+---
 
-CMake
+## ⚡ Features
 
-Build Instructions
-bash
-Copy
-Edit
+* ✅ Simple Finite-State Lexer
+* ✅ Recursive Descent / LL(1) Parser
+* ✅ Abstract Syntax Tree generation
+* ✅ LLVM IR Code Generation
+* ✅ Basic JIT Compilation using LLVM
+* ⚙️ Extensible Architecture (control flow, functions, user-defined operators in progress)
+
+---
+
+## 📂 Folder Structure
+
+```bash
+mana-script/
+├── src/            # Compiler source (lexer, parser, codegen)
+├── examples/       # Sample .mana programs
+├── build/          # Build output
+├── CMakeLists.txt  # Build config
+└── README.md       # Project documentation
+```
+
+---
+
+## 👥 Team Members
+
+* **Manu**
+* **Ayush Debnath**
+* **Mohd. Adnan**
+* **Manish Singh Rathaur**
+
+---
+
+## 🛠️ Getting Started
+
+### ✅ Prerequisites
+
+* C++17 or later
+* [LLVM](https://llvm.org/) (version 15.0+ recommended)
+* [CMake](https://cmake.org/) (3.15+)
+* Git
+
+> 💡 Works on Windows, Linux, and macOS (Tested primarily on Windows)
+
+### 🔧 Build & Run Instructions
+
+```bash
 # Clone the repo
 git clone https://github.com/adnanis78612/mana-script.git
 cd mana-script
@@ -36,19 +73,38 @@ cd mana-script
 # Create a build directory
 mkdir build && cd build
 
-# Configure CMake and build
+# Configure and build
+dependency: helm package
 cmake ..
-make
+cmake --build . --config Release
 
-# Run the mana-script
-./mana-script
-⚡ Features
-Simple lexer and parser
+# Run mana-script (example)
+./mana ../examples/hello.mana
+```
 
-Code generation to LLVM IR
+> On Windows, run `mana.exe` instead of `./mana`.
 
-Compilation with JIT support
+---
 
-🤝 Contributing
-Feel free to contribute to this project, suggest ideas, or report issues.
+## 🤝 Contributing
+
+Contributions are welcome! If you have suggestions, bug reports, or feature ideas, feel free to:
+
+* Open an Issue
+* Create a Pull Request
+* Fork and experiment!
+
+---
+
+## 📜 License
+
+This project is released under the MIT License.
+
+---
+
+## 📎 References
+
+* [LLVM Official Docs](https://llvm.org/docs/)
+* *Compilers: Principles, Techniques, and Tools* – Aho, Lam, Sethi, Ullman
+* *Lex & Yacc* by John Levine
 

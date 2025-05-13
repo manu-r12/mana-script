@@ -1,24 +1,12 @@
-cmake_minimum_required(VERSION 3.13)
-project(Kaleidoscope LANGUAGES CXX)
+cmake_minimum_required(VERSION 3.15)
+project(mana-script LANGUAGES CXX)
 
+# Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(LLVM REQUIRED CONFIG)
-message(STATUS "Found LLVM ${LLVM_PACKAGE_VERSION}")
-message(STATUS "Using LLVMConfig.cmake in: ${LLVM_DIR}")
+# Add source directory
+add_subdirectory(src)
 
-include_directories(${LLVM_INCLUDE_DIRS})
-add_definitions(${LLVM_DEFINITIONS})
-
-add_executable(kaleidoscope
-    src/main.cpp
-    # (add other cpp files as you go)
-)
-
-target_link_libraries(kaleidoscope
-    LLVMCore
-    LLVMSupport
-    # (add more LLVM libraries as needed)
-)
-
+# Set output directories
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
