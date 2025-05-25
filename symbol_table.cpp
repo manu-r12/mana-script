@@ -57,3 +57,4 @@ Symbol* SymbolTable::resolve(const std::string& name) {
 }
 
 } // namespace mana// Adding symbol_table.cpp from Ayush-Debnath
+// Adding symbol_table.cpp from Ayush-Debnath
