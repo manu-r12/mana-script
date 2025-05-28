@@ -64,3 +64,4 @@ void DiagnosticManager::printDiagnostics(std::ostream& os) const {
 }
 
 } // namespace mana// Adding error.cpp from manu-r12
+// Adding error.cpp from manu-r12
